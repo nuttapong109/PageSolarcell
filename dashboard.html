@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - สต็อกสินค้า</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+
+        .logo-container img {
+            max-width: 100px;
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            padding: 30px;
+            max-width: 900px;
+            margin: 0 auto 50px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+        }
+
+        .stock-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .stock-header h2 {
+            margin: 0;
+            color: #333;
+        }
+
+        .add-button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .add-button:hover {
+            background-color: #218838;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f7f7f7;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .header {
+            background-color: #ff3300;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logout-button {
+            background-color: white;
+            color:rgb(0, 0, 0);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .logout-button:hover {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div>ระบบจัดการโซล่าเซลล์</div>
+        <button class="logout-button" onclick="logout()">ออกจากระบบ</button>
+    </div>
+
+    <div class="logo-container">
+        <img src="img/logo.jpg" alt="โลโก้บริษัท">
+    </div>
+
+    <div class="container">
+        <div class="stock-header">
+            <h2>สต็อกสินค้า</h2>
+            <button class="add-button" onclick="addProduct()">+ เพิ่มสินค้า</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ชื่อสินค้า</th>
+                    <th>จำนวน</th>
+                    <th>สถานะ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>แผงโซล่าเซลล์ 450W</td>
+                    <td>25</td>
+                    <td>พร้อมใช้งาน</td>
+                </tr>
+                <tr>
+                    <td>Inverter 5kW</td>
+                    <td>10</td>
+                    <td>สั่งเพิ่ม</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function addProduct() {
+            alert("ยังไม่ได้เชื่อมกับฟอร์มเพิ่มสินค้า");
+        }
+
+        function logout() {
+            alert("ออกจากระบบสำเร็จ!");
+            window.location.href = "index.html"; 
+        }
+    </script>
+
+</body>
+
+</html>
